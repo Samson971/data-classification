@@ -1,0 +1,4 @@
+apirest
+/HAPT-Data
+**/Models/**
+**/.vscode/**
