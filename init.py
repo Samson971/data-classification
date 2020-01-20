@@ -151,3 +151,26 @@ for name,model in models.items():
 
 
 # %%
+import requests
+print(requests.__file__)
+
+
+# %%
+res = models['Decision Tree Classifer'].predict(test)
+
+# %%
+test = X_test[0].reshape(1,-1)
+
+# %%
+test.shape
+
+# %%
+X_test[0].shape
+
+# %%
+print(format(X_test[0]).shape)
+
+# %%
+res
+
+# %%
