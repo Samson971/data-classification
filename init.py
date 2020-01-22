@@ -159,7 +159,7 @@ print(requests.__file__)
 res = models['Decision Tree Classifer'].predict(test)
 
 # %%
-test = X_test[0].reshape(1,-1)
+test = X_test[1012].reshape(1,-1)
 
 # %%
 test.shape
