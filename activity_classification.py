@@ -2,6 +2,7 @@
 import os
 import time
 
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -14,7 +15,7 @@ from sklearn.linear_model import RidgeClassifier, SGDClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
-import matplotlib.patches as mpatches
+
 
 """
 Loading the data
@@ -203,10 +204,6 @@ for name,model in models.items():
         joblib.dump(model, filename = filename)
 
 
-
-# %%
-print(evaluate_model(models['gaussian_process_classifier'],X_train,y_train,X_test,y_test))
-
 # %%
 def sort(index):
     new_array = [i[0:index+1:index] for i in results]
@@ -272,7 +269,7 @@ def predict(data,model):
 #%%
 predict(X_test[1:3].tolist(),'gaussian_naive_bayes_classifier')
 #%%
-predict(X_test[1].reshape(1,-1).tolist(),'gaussian_naive_bayes_classifier')
-predict(X_test[1:123].tolist(),'gaussian_naive_bayes_classifier')
+predict(X_test[1].reshape(1,-1).tolist(),'random_forest_classifier')
+predict(X_test[1:123].tolist(),'ridge_classifier')
 
 # %%
