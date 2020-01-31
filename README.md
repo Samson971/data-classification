@@ -48,9 +48,9 @@ Its a Post Method and requires 2 argument in the body of the request: data and m
 The response is a json document formed as :
 
 ```json
-{'results': [
-    {'id': 'activity id of the first array', 'label': 'label of the first array'},
-    {'id': 'activity id of the second array', 'label': 'label of the second array'},
-    {'id': 'activity id of the third array', 'label': 'label of the third array'},
+{"results": [
+    {"id": "activity id of the first array", "label": "label of the first array"},
+    {"id": "activity id of the second array", "label": "label of the second array"},
+    {"id": "activity id of the third array", "label": "label of the third array"},
 ]}
 ```
