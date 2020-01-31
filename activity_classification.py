@@ -61,6 +61,8 @@ color_legend = [mpatches.Patch(color = value[1], label = value[0]) for (key,valu
 def to_color(activity_id):
     return activity_color_map[activity_id][1]
 
+
+"""Mean of body-Acc for XYZ"""
 plot_data = [[X_train[i][0],X_train[i][1],X_train[i][2],y_train[i]] for i in range(len(X_train))]
 fig = plt.figure()
 ax = plt.axes(projection='3d')
@@ -70,9 +72,10 @@ z_axis = [ X_train[i][2] for i in range(len(X_train))]
 color = [ to_color(y_train[i]) for i in range(len(y_train))]
 ax.scatter3D(x_axis, y_axis, z_axis,color=color)
 lgd = ax.legend(handles=color_legend,bbox_to_anchor=(-0.1,1))
-#fig.savefig('samplefigure', bbox_extra_artists=(lgd), bbox_inches='tight')
+ax.set_title('Mean of body-Acc for XYZ')
 
 #%%
+"""Standard Deviation of body-Acc for XYZ"""
 fig2 = plt.figure()
 ax2 = plt.axes(projection='3d')
 x_axis2 = [ X_train[i][3] for i in range(len(X_train))]
@@ -81,6 +84,55 @@ z_axis2 = [ X_train[i][5] for i in range(len(X_train))]
 color = [ to_color(y_train[i]) for i in range(len(y_train))]
 ax2.scatter3D(x_axis2, y_axis2, z_axis2,color=color)
 ax2.legend(handles=color_legend,bbox_to_anchor=(-0.1,1))
+ax2.set_title('Standard Deviation of body-Acc for XYZ')
+
+#%%
+"""Median Deviation of body-Acc for XYZ"""
+fig3 = plt.figure()
+ax3 = plt.axes(projection='3d')
+x_axis3 = [ X_train[i][6] for i in range(len(X_train))]
+y_axis3 = [ X_train[i][7] for i in range(len(X_train))]
+z_axis3 = [ X_train[i][8] for i in range(len(X_train))]
+color = [ to_color(y_train[i]) for i in range(len(y_train))]
+ax3.scatter3D(x_axis3, y_axis3, z_axis3,color=color)
+ax3.legend(handles=color_legend,bbox_to_anchor=(-0.1,1))
+ax3.set_title('Median Deviation of body-Acc for XYZWe train the models and test them to and gather data such as the accuracy​')
+
+#%%
+"""Energy of body-Acc for XYZ"""
+fig4 = plt.figure()
+ax4 = plt.axes(projection='3d')
+x_axis4 = [ X_train[i][16] for i in range(len(X_train))]
+y_axis4 = [ X_train[i][17] for i in range(len(X_train))]
+z_axis4 = [ X_train[i][18] for i in range(len(X_train))]
+color = [ to_color(y_train[i]) for i in range(len(y_train))]
+ax4.scatter3D(x_axis4, y_axis4, z_axis4,color=color)
+ax4.legend(handles=color_legend,bbox_to_anchor=(-0.1,1))
+ax4.set_title('Energy of body-Acc for XYZ')
+
+#%%
+"""Correlation of body-Acc for XYZ"""
+fig5 = plt.figure()
+ax5 = plt.axes(projection='3d')
+x_axis5 = [ X_train[i][37] for i in range(len(X_train))]
+y_axis5 = [ X_train[i][38] for i in range(len(X_train))]
+z_axis5 = [ X_train[i][39] for i in range(len(X_train))]
+color = [ to_color(y_train[i]) for i in range(len(y_train))]
+ax5.scatter3D(x_axis5, y_axis5, z_axis5,color=color)
+ax5.legend(handles=color_legend,bbox_to_anchor=(-0.1,1))
+ax5.set_title('Correlation of body-Acc for XYZ')
+
+#%%
+"""Mean of body-Gyro for XYZ"""
+fig6 = plt.figure()
+ax6 = plt.axes(projection='3d')
+x_axis6 = [ X_train[i][120] for i in range(len(X_train))]
+y_axis6 = [ X_train[i][121] for i in range(len(X_train))]
+z_axis6 = [ X_train[i][122] for i in range(len(X_train))]
+color = [ to_color(y_train[i]) for i in range(len(y_train))]
+ax6.scatter3D(x_axis6, y_axis6, z_axis6,color=color)
+ax6.legend(handles=color_legend,bbox_to_anchor=(-0.1,1))
+ax6.set_title('Mean of body-Gyro for XYZ')
 
 
 """
