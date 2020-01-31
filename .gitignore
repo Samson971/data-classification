@@ -1,5 +1,5 @@
 apirest
 /HAPT-Data
-**/Models/**
+**/models/**
 **/.vscode/**
 **/__pycache__/**
